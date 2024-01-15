@@ -30,5 +30,11 @@ def canUnlockAll(boxes):
             opened_boxes.add(key)
             # Add the keys from the new box to the list of keys to check
             keys_to_check.extend(boxes[key])
-
     return len(opened_boxes) == len(boxes)
+def main():
+    """Entry point"""
+    canUnlockAll([[]])
+
+
+if __name__ == '__main__':
+    main()
