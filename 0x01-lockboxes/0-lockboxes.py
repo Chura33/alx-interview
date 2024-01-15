@@ -1,6 +1,22 @@
 #!/usr/bin/python3
 
 
+"""
+Module: lockboxes
+
+This module provides a function to determine if all boxes can be opened
+based on a set of rules.
+
+Functions:
+    canUnlockAll(boxes): Determine if all boxes can be opened.
+
+Usage:
+    # Example usage of canUnlockAll function
+    boxes = [[1], [2], [3], [4], []]
+    print(canUnlockAll(boxes))
+"""
+
+
 def canUnlockAll(boxes):
     """
     Determine if all boxes can be opened.
@@ -30,11 +46,5 @@ def canUnlockAll(boxes):
             opened_boxes.add(key)
             # Add the keys from the new box to the list of keys to check
             keys_to_check.extend(boxes[key])
+
     return len(opened_boxes) == len(boxes)
-def main():
-    """Entry point"""
-    canUnlockAll([[]])
-
-
-if __name__ == '__main__':
-    main()
